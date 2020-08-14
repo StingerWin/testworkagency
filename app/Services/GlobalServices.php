@@ -15,7 +15,7 @@ class GlobalServices
         $path = $path.'/'.$name;
         $img = Image::make($data)->fit(300, 300, function ($constraint) {
             $constraint->upsize();
-        })->encode('jpg', 80);
+        })->orientate()->encode('jpg', 80);
         Storage::disk('public')->put($path, $img);
 
 
