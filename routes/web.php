@@ -18,7 +18,7 @@ Route::group(['middleware' => 'auth'], function () {
         return redirect()->route('employees.index');
     });
     Route::resource('employees', 'Employees\EmployeeController');
-    Route::resource('positions', 'Positions\positionController');
+    Route::resource('positions', 'Positions\PositionController');
     Route::get('get-employees', 'Employees\EmployeeController@getEmployees')->name('getEmployees');
 
 });
